@@ -1,7 +1,7 @@
 ﻿<MudItem>
     <MudAutocomplete T="string" Placeholder="Search for a Challenge or Summoner" @bind-Value="challenge" SearchFunc="@SearchChallenge"
-                     AdornmentIcon="@Icons.Material.Filled.Search" AdornmentColor="Color.Primary"
-                     Variant="Variant.Outlined" Dense DisableUnderLine />
+                     AdornmentIcon="@Icons.Material.Filled.Search" AdornmentColor="Color.Primary" Variant="Variant.Outlined"
+                     Dense DisableUnderLine CoerceText="false" SelectOnClick="false"/>
 </MudItem>
 
 @code {
