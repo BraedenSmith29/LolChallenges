@@ -2,16 +2,18 @@
 
 <PageTitle>LolChallenges.Web</PageTitle>
 
-<div class="page">
-    <NavMenu />
-
-    <main>
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
-
-<MudThemeProvider />
+<MudThemeProvider IsDarkMode />
 <MudDialogProvider />
 <MudSnackbarProvider />
+
+<MudLayout Style="min-height: 100vh">
+    <NavMenu />
+    <div style="padding-bottom: 92px">
+        <MudMainContent Class="py-12 px-16">
+            @Body
+        </MudMainContent>
+    </div>
+    <div style="position: absolute; bottom: 0; width: 100%; height: 92px;">
+        <Footer />
+    </div>
+</MudLayout>

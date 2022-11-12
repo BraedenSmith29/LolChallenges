@@ -1,7 +1,12 @@
-﻿<MudPaper  Width="250px" Height="100vh" Class="py-3" Elevation="3">
-    <MudNavMenu>
-        <MudText Typo="Typo.h6" Class="px-4">LOL Challenges</MudText>
-        <MudDivider Class="my-2" />
-        <MudNavLink Href="">Home</MudNavLink>
-    </MudNavMenu>
-</MudPaper>
+﻿@using LolChallenges.Web.Components
+
+<MudAppBar Fixed="false">
+    <MudText Typo="Typo.h5" Class="ml-2 mr-8">Challenges.LoL</MudText>
+    <MudButton Class="mr-2" Link="/">Home</MudButton>
+    <MudButton Class="mr-2" Link="/Challenges">Challenges</MudButton>
+    <MudButton Class="mr-2" Link="/Leaderboards">Leaderboard Builder</MudButton>
+    <MudSpacer />
+    <div style="width: 16vw">
+        <MainSearch />
+    </div>
+</MudAppBar>

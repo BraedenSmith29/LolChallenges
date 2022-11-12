@@ -1,0 +1,24 @@
+﻿<MudItem>
+    <MudAutocomplete T="string" Placeholder="Search for a Challenge or Summoner" @bind-Value="challenge" SearchFunc="@SearchChallenge"
+                     AdornmentIcon="@Icons.Material.Filled.Search" AdornmentColor="Color.Primary" Variant="Variant.Outlined"
+                     Dense DisableUnderLine CoerceText="false" SelectOnClick="false"/>
+</MudItem>
+
+@code {
+    private string? challenge;
+    private string[] challenges =
+    {
+        "Predator", "It's my Jungle Now", "Three Buffed"
+    };
+
+    private async Task<IEnumerable<string>> SearchChallenge(string value)
+    {
+        // In practice, will be fetching the list of challenges or something
+        await Task.Delay(5);
+
+        // if text is null or empty, don't return values (drop-down will not open)
+        if (string.IsNullOrEmpty(value))
+            return new string[0];
+        return challenges.Where(x => x.Contains(value, StringComparison.InvariantCultureIgnoreCase));
+    }
+}
