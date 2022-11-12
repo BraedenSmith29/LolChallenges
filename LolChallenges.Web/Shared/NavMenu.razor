@@ -1,6 +1,10 @@
-﻿<MudAppBar Fixed="false">
+﻿@using LolChallenges.Web.Components
+
+<MudAppBar Fixed="false">
     <MudText Typo="Typo.h5" Class="ml-2 mr-8">Challenges.LoL</MudText>
     <MudButton Class="mr-2" Link="/">Home</MudButton>
     <MudButton Class="mr-2" Link="/Challenges">Challenges</MudButton>
     <MudButton Class="mr-2" Link="/Leaderboards">Leaderboard Builder</MudButton>
+    <MudSpacer />
+    <MainSearch />
 </MudAppBar>

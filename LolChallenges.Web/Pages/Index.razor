@@ -1,31 +1,11 @@
 ﻿@page "/"
 
+@using LolChallenges.Web.Components
+
 <PageTitle>Index</PageTitle>
 
 <h1>Hello, welcome to the LOL Challenges Website!</h1>
 
 To view a challenge leaderboard, search for it below!
 
-<MudItem xs="12" sm="6" md="4">
-    <MudAutocomplete T="string" Label="Challenge" @bind-Value="challenge" SearchFunc="@SearchChallenge"
-                     AdornmentIcon="@Icons.Material.Filled.Search" AdornmentColor="Color.Primary" />
-</MudItem>
-
-@code {
-    private string? challenge;
-    private string[] challenges =
-    {
-        "Predator", "It's my Jungle Now", "Three Buffed"
-    };
-
-    private async Task<IEnumerable<string>> SearchChallenge(string value)
-    {
-        // In practice, will be fetching the list of challenges or something
-        await Task.Delay(5);
-
-        // if text is null or empty, don't return values (drop-down will not open)
-        if (string.IsNullOrEmpty(value))
-            return new string[0];
-        return challenges.Where(x => x.Contains(value, StringComparison.InvariantCultureIgnoreCase));
-    }
-}
+<MainSearch />
