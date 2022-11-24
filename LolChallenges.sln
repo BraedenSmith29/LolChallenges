@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LolChallenges.Web", "LolChallenges.Web\LolChallenges.Web.csproj", "{AE15BC4D-FC45-4235-94B5-74FCF62C0BF9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General Files", "General Files", "{6AD0C7FD-F633-4E45-91EA-A97D836FE708}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
@@ -13,16 +11,30 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General Files", "General Fi
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LolChallenges.Client", "LolChallenges.Client\LolChallenges.Client.csproj", "{F12906EA-2ADA-46E7-82EA-B463C47EBA46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LolChallenges.Server", "LolChallenges.Server\LolChallenges.Server.csproj", "{42051D39-52F8-4975-AAFD-19EB110D8B29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LolChallenges.Shared", "LolChallenges.Shared\LolChallenges.Shared.csproj", "{3F369755-D2AE-48A4-B401-1A90D718C0E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AE15BC4D-FC45-4235-94B5-74FCF62C0BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE15BC4D-FC45-4235-94B5-74FCF62C0BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE15BC4D-FC45-4235-94B5-74FCF62C0BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE15BC4D-FC45-4235-94B5-74FCF62C0BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12906EA-2ADA-46E7-82EA-B463C47EBA46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12906EA-2ADA-46E7-82EA-B463C47EBA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12906EA-2ADA-46E7-82EA-B463C47EBA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12906EA-2ADA-46E7-82EA-B463C47EBA46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42051D39-52F8-4975-AAFD-19EB110D8B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42051D39-52F8-4975-AAFD-19EB110D8B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42051D39-52F8-4975-AAFD-19EB110D8B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42051D39-52F8-4975-AAFD-19EB110D8B29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F369755-D2AE-48A4-B401-1A90D718C0E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F369755-D2AE-48A4-B401-1A90D718C0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F369755-D2AE-48A4-B401-1A90D718C0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F369755-D2AE-48A4-B401-1A90D718C0E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
