@@ -1,7 +1,5 @@
 using LolChallenges.Server.Interfaces.Repositories;
-using LolChallenges.Server.Interfaces.Services;
 using LolChallenges.Server.Repositories;
-using LolChallenges.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
