@@ -8,10 +8,13 @@ namespace LolChallenges.Server.Repositories
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
 
-        public RiotRepository(IConfiguration config, HttpClient httpClient)
+        public RiotRepository(IConfiguration config)
         {
             _apiKey = config["RiotApiKey"];
-            _httpClient = httpClient;
+            _httpClient = new()
+            {
+                BaseAddress = new Uri("https://na1.api.riotgames.com")
+            };
         }
 
         public async Task<HttpResponseMessage> HandleRequestAsync(string endpointSuffix)

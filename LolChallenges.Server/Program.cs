@@ -1,5 +1,7 @@
 using LolChallenges.Server.Interfaces.Repositories;
+using LolChallenges.Server.Interfaces.Services;
 using LolChallenges.Server.Repositories;
+using LolChallenges.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +11,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 // Implement Services
-builder.Services.AddHttpClient<RiotRepository>(c => c.BaseAddress = new Uri("https://na1.api.riotgames.com"));
 builder.Services.AddSingleton<IRiotRepository, RiotRepository>();
 
 var app = builder.Build();

@@ -17,9 +17,5 @@
     <ProjectReference Include="..\LolChallenges.Shared\LolChallenges.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\Services\" />
-  </ItemGroup>
-
 
 </Project>
