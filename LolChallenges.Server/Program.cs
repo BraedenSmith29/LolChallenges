@@ -1,4 +1,7 @@
-using Microsoft.AspNetCore.ResponseCompression;
+using LolChallenges.Server.Interfaces.Repositories;
+using LolChallenges.Server.Interfaces.Services;
+using LolChallenges.Server.Repositories;
+using LolChallenges.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+// Implement Services
+builder.Services.AddSingleton<IRiotRepository, RiotRepository>();
 
 var app = builder.Build();
 
